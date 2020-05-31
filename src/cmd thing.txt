@@ -1,0 +1,31 @@
+mingw32-make MINGW=1 CC=gcc WINDOWSHELL=1 SDL=1 NOOBJDUMP=0
+
+g_game.c
+g_game.h
+m_cond.c
+m_cond.h
+lua_baselib.c
+
+Look for G_GametypeUsesLives() and start copying useful functions and rename them accordingly.
+
+d_clisrv.h
+d_clisrv.c
+d_netcmd.c
+
+Look for "downloadspeed" consvar, copy, and rename accordingly.
+
+dehacked.c
+
+Insert the new vars under lib_getenum. (search for getenum)
+
+----add the dimenu boolean to the player. (d_player.h, g_game.c, etc)
+
+----disable movement whenever dimenu is true. (in p_user.c)
+
+----whitelist stuff in w_wad.c (di_main.pk3)
+
+----change log file in i_main.c
+
+----change config file in m_misc.h
+
+----autoload di_main.pk3 and di_music.dta in d_main.c
